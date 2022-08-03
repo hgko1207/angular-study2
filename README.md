@@ -1,27 +1,24 @@
-# AngularStudy2
+# AngularJS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+구글이 만든 단일 페이지 웹 애플리케이션 개발을 위한 자바스크립트 프레임워크
+다양한 플랫폼에서 동작할 수 있게 하는 개발 툴과 기능들을 제공
 
-## Development server
+## Component
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+컴포넌트 기반 개발 방법
 
-## Code scaffolding
+## Module
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+세부 구현이 숨겨지고 공개 API를 이용해 다른 코드에서 재사용 가능한 코드
 
-## Build
+## Angular Module
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+컴포넌트, 파이프, 서비스 등과 같은 앵귤러 애플리케이션의 주요 부분을 기능단위로 그룹핑 하게 해준다.
 
-## Running unit tests
+- 모든 앵귤러 애플리케이션은 하나의 Root Module을 가진다.
+- 여러 Feature Module을 가질 수 있다.
+- 재사용할 수 있는 기능을 외부에 배포하기 위해 사용되기도 한다.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+$ ng g c todo/todos --module todo/todo.module.ts --export
+```
