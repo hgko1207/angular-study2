@@ -18,8 +18,10 @@
 - 뷰와 로직으로 구성
 
 ```bash
-$ ng g c todo/todos --module todo/todo.module.ts --export
-$ ng g c todos/todo --inline-template --inline-style
+$ ng g component todo/todos --module todo/todo.module.ts --export
+
+# 컴포넌트 내부에서 html, css 코드를 작성하도록 생성
+$ ng g component todos/todo --inline-template --inline-style
 ```
 
 ## Angular Template
@@ -57,3 +59,19 @@ $ ng g c todos/todo --inline-template --inline-style
   - `EventEmitter` 사용하여 부모에게 이벤트 전달
   - 부모 컴포넌트는 `$event`로 이벤트의 데이터를 전달 받음
   - 자식이 부모 컴포넌트를 직접 주입받을 수 있음
+
+## Pipe
+
+- 템플릿에서 보이는 데이터를 변환해줌
+- AngularJs 1.x에서는 필터로 제공되었습니다.
+- 실제 값을 변경하는 것이 아니라 보여주는 값만 바꿔 보여주기 위해 사용합니다.
+
+```ts
+// 사용법
+{{ express | pipeName: paramValue }}
+
+// 예
+{{ today | date }}
+{{ today | date:"yy/mm/dd" }} // 날짜 포맷 변환
+{{ today | date | uppercase }}
+```
