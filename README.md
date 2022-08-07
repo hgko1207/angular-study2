@@ -62,7 +62,7 @@ $ ng g component todos/todo --inline-template --inline-style
 
 ## Pipe
 
-- 템플릿에서 보이는 데이터를 변환해줌
+- 템플릿(HTML)에서 보이는 데이터를 변환해줍니다.
 - AngularJs 1.x에서는 필터로 제공되었습니다.
 - 실제 값을 변경하는 것이 아니라 보여주는 값만 바꿔 보여주기 위해 사용합니다.
 
